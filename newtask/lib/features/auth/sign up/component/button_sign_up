@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+import 'package:newtask/features/auth/login/view/page/loginPage.dart';
+//import 'package:newtask/';C:\Users\hp\Downloads\android-project-master\newtask\lib\features\auth\
+//login\view\page\loginPage.dart
+
+class button_sign_up extends StatelessWidget {
+  const button_sign_up({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FilledButton(
+                style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.blue)),
+                onPressed: () {},
+                child: const Text("LOGIN")),
+           
+          ],
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+                const Text("have account?"),
+            FilledButton(
+                style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.blue)),
+                onPressed: () {_navigateToNextScreen3(context);},
+                child: const Text("Login Here"))
+          ],
+        )
+      ],
+    );
+  }
+ void _navigateToNextScreen3(BuildContext context) {
+    Navigator.of(context)
+       .push(MaterialPageRoute(builder: (context) => const loginPage()));
+  }
+  }
+
