@@ -8,7 +8,7 @@ class OnboardingBody extends StatelessWidget{
   
   Widget build(BuildContext context) {
     return  Column(children: [
-        Text("Welcome In clothes store"),
+        Text("Welcome In Watch store"),
         Expanded(
           child: BlocProvider<OnboardingControllerCubit>.value(
             value:  OnboardingControllerCubit(),

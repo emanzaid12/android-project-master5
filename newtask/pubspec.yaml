@@ -61,7 +61,13 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-   - assets/image/images.jpg
+   - "assets/image/IMG-20240420-WA0041.jpg"
+   - "assets/image/IMG-20240420-WA0039.jpg"
+   - "assets/image/Minifocus-Lady-Watch-Mini-Focus-Minimalist-Day-Date-Leather-Band-Quartz-Watches-Montre-Mini-Focus.webp"
+   - "assets/image/eman.jpg"
+   
+
+   
 flutter_native_splash:
    color: "#42a5f5"
    image: "assets/image/IMG-20240420-WA0041.jpg"
