@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:newtask/features/auth/login/view/loginPage.dart';
 import 'package:newtask/features/auth/onboarding/controller/cubit/onboarding_controller_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// ignore: must_be_immutable
 class OnboardingButtonWidget extends StatelessWidget {
-  
-      OnboardingButtonWidget({super.key, required this.controller});
+  OnboardingButtonWidget({super.key, required this.controller});
   OnboardingControllerCubit controller;
 
   Widget build(BuildContext context) {
@@ -18,8 +20,18 @@ class OnboardingButtonWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(onPressed: () {}, child: const Text("Skip")),
-                TextButton(onPressed: controller.onChangeToNext, child: const Text("Next")),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const loginPage()),
+                      );
+                    },
+                    child: const Text("Skip")),
+                TextButton(
+                    onPressed: controller.onChangeToNext,
+                    child: const Text("Next")),
               ],
             ),
           );

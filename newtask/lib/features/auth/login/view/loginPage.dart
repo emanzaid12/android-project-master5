@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newtask/features/auth/login/view/component/bodyW.dart';
-import 'package:newtask/features/auth/login/view/component/bottomW.dart';
+import 'package:newtask/features/auth/login/component/bodyW.dart';
+import 'package:newtask/features/auth/login/component/bottomW.dart';
 
 class loginPage extends StatelessWidget {
   const loginPage({super.key});
@@ -12,5 +12,6 @@ class loginPage extends StatelessWidget {
             body: SizedBox(height: 500, child: bodyW()),
             bottomNavigationBar:
                 const SizedBox(height: 200, child: bottomW())));
+         
   }
 }

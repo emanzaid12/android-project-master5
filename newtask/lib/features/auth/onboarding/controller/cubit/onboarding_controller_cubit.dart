@@ -9,11 +9,12 @@ part 'onboarding_controller_state.dart';
 
 class OnboardingControllerCubit extends Cubit<OnboardingControllerState> {
   OnboardingControllerCubit() : super(OnboardingControllerInitial());
+
   PageController pageController=PageController();
   void onChangeToNext(){
-    pageController.nextPage(duration: Duration(seconds: 2), curve: Curves.bounceIn);
+    pageController.nextPage(duration: const Duration(seconds: 2), curve: Curves.bounceIn);
   }
-  List date = [
+  var date = [
     OnboardingModel(
         images: 'assets/image/eman.jpg',
         titles: 'Project over view',

@@ -11,12 +11,28 @@ class bodyW extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AppBar(
+          leading: Image.asset('assets/image/R.png'),
           backgroundColor: Colors.blue,
           title: const Text('Login Page',
               style: TextStyle(fontWeight: FontWeight.bold)),
         ),
         const Spacer(
           flex: 1,
+        ),
+        const CircleAvatar(
+          radius: 50,
+          backgroundColor: Colors.blue,
+          backgroundImage: AssetImage('assets/image/R.png'),
+        ),
+        const Text(
+          "WATCH STORE",
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Color.fromARGB(255, 0, 95, 172)),
+        ),
+        const SizedBox(
+          height: 30,
         ),
         TextFormField(
             autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -40,7 +56,10 @@ class bodyW extends StatelessWidget {
               suffixIcon: const Icon(Icons.remove_red_eye)),
           obscureText: true,
           obscuringCharacter: '*',
-        )
+        ),
+        const SizedBox(
+          height: 30,
+        ),
       ],
     );
   }

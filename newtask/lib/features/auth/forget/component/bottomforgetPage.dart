@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newtask/features/auth/newPass/view/newpassPage.dart';
 
 class bottomforgetPage extends StatelessWidget {
   const bottomforgetPage({super.key});
@@ -9,9 +10,11 @@ class bottomforgetPage extends StatelessWidget {
       FilledButton(
           style: const ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(Colors.blue)),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const newpassPage()));
+          },
           child: const Text("Verification"))
     ]);
   }
 }
-

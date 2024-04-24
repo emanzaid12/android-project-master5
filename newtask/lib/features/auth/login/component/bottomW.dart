@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newtask/features/auth/forget/view/forgetPage.dart';
-import 'package:newtask/features/auth/sign up/view/signUpPage.dart';
+import 'package:newtask/features/auth/signup/view/signUpPage.dart';
+
 class bottomW extends StatelessWidget {
   const bottomW({super.key});
 
@@ -33,25 +34,26 @@ class bottomW extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-                const Text("Don't have account! "),
-            TextButton(
-              onPressed: () {
-                  _navigateToNextScreen2(context);
-                },
+            const Text("Don't have account! "),
+            FilledButton(
                 style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(Colors.blue)),
-                
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const signUpPage()),
+                  );
+                },
                 child: const Text("Sign up"))
           ],
         )
       ],
     );
   }
-      void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const forgetPage()));
-   }
-    void _navigateToNextScreen2(BuildContext context) {
+
+  void _navigateToNextScreen(BuildContext context) {
     Navigator.of(context)
-       .push(MaterialPageRoute(builder: (context) => const signUpPage()));
+        .push(MaterialPageRoute(builder: (context) => const forgetPage()));
   }
 }

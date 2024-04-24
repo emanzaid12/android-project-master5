@@ -9,13 +9,31 @@ class bodyforget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       AppBar(
+        leading: Image.asset('assets/image/R.png'),
         backgroundColor: Colors.blue,
-        title: const Text('Forget password Page',
+        title: const Text('Forget Password Page',
             style: TextStyle(fontWeight: FontWeight.bold)),
       ),
       const Spacer(
         flex: 1,
       ),
+      const CircleAvatar(
+        radius: 50,
+        backgroundColor: Colors.blue,
+        backgroundImage: AssetImage('assets/image/R.png'),
+      ),
+      const Text(
+        "WATCH STORE",
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Color.fromARGB(255, 0, 95, 172)),
+      ),
+      const SizedBox(
+        height: 30,
+      ),
+      const Text("Enter your email",
+          style: TextStyle(fontWeight: FontWeight.bold)),
       TextFormField(
           autovalidateMode: AutovalidateMode.onUserInteraction,
           controller: TextEditingController(),
