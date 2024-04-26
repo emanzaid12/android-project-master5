@@ -21,12 +21,8 @@ class OnboardingButtonWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const loginPage()),
-                      );
+                    onPressed: (){
+                      controller.onCallSkip(context);
                     },
                     child: const Text("Skip")),
                 TextButton(

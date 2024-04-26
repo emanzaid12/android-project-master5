@@ -12,6 +12,5 @@ class loginPage extends StatelessWidget {
             body: SizedBox(height: 500, child: bodyW()),
             bottomNavigationBar:
                 const SizedBox(height: 200, child: bottomW())));
-         
   }
 }

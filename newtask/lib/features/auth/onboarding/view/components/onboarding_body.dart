@@ -27,6 +27,7 @@ class OnboardingBody extends StatelessWidget {
               OnboardingControllerCubit controller =
                   context.read<OnboardingControllerCubit>();
               return PageView(
+                //controller: controller.pageController,
                 controller: controller.pageController,
                 children: List.generate(controller.date.length, (index) {
                   return Column(

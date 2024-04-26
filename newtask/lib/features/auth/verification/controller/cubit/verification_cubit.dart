@@ -7,7 +7,7 @@ import 'package:newtask/features/auth/login/view/loginPage.dart';
 part 'verification_state.dart';
 
 class VerificationCubit extends Cubit<VerificationState>{
-  VerificationCubit{} : super (VerificationInitial({}));
+  VerificationCubit() : super (VerificationInitial());
 
   TextEditingController pinCodeController = TextEditingController();
   final String validateCode = '11111';
