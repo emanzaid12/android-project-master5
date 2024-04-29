@@ -35,10 +35,13 @@ class button_sign_up extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text("have an account? "),
-                  InkWell(
-                    onTap: () {},
-                    child: const Text("login"),
-                  )
+                  FilledButton(
+                      style: const ButtonStyle(
+                          backgroundColor:
+                              MaterialStatePropertyAll(Colors.blue)),
+                      onPressed: () =>
+                          controller.OnPressedConfirmButton(context),
+                      child: const Text("Login")),
                 ],
               )
             ],

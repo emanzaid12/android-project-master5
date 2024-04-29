@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newtask/features/auth/login/view/loginPage.dart';
 import 'package:newtask/features/auth/onboarding/view/page/onboarding_page.dart';
 import 'package:newtask/features/auth/signup/view/signUpPage.dart';
+import 'package:newtask/features/dashboard/view/page/dashboardPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
@@ -37,6 +38,9 @@ class MyRoutes {
     ),
     MaterialPageRoute<dynamic>(
       builder: (BuildContext context) => const signUpPage(),
+    ),
+        MaterialPageRoute<dynamic>(
+      builder: (BuildContext context) => const dashboardPage(),
     ),
   ];
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
