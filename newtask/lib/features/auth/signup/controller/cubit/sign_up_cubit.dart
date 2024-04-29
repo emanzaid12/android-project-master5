@@ -8,22 +8,21 @@ part 'sign_up_state.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
   SignUpCubit() : super(SignUpInitial());
-  TextEditingController  firstNameController =TextEditingController();
+  TextEditingController firstNameController = TextEditingController();
   TextEditingController lastNameController = TextEditingController();
   TextEditingController mailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  
-  GlobalKey<FormState> formKey=GlobalKey<FormState>();
 
-  void OnPressedConfirmButton(){
-    if(formKey.currentState!.validate()){
-      log(firstNameController.text);
-      log(lastNameController.text);
-      log(mailController.text);
-      log(passwordController.text);
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-    }
-    else{
+  // ignore: non_constant_identifier_names
+  void OnPressedConfirmButton(BuildContext context) {
+    if (formKey.currentState!.validate()) {
+      Navigator.pushNamed(context, 'login', arguments: [
+        firstNameController.text,
+        lastNameController.text,
+      ]);
+    } else {
       log('invalid inputs');
     }
   }

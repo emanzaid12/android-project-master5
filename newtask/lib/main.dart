@@ -23,11 +23,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      //home: onBoarding ? const loginPage() : const OnBoardingPage(),
       onGenerateRoute: MyRoutes.onGenerateRoute,
       onGenerateInitialRoutes: (_) => MyRoutes.initRoutes,
     );
   }
 }
+
 class MyRoutes {
   static List<Route> initRoutes = [
     MaterialPageRoute<dynamic>(
@@ -41,9 +43,12 @@ class MyRoutes {
     //settings.arguments
     switch (settings.name) {
       case 'login':
-        
+        final List data = settings.arguments as List;
         return MaterialPageRoute<dynamic>(
-          builder: (BuildContext context) => const loginPage(),
+          builder: (BuildContext context) => loginPage(
+            firstName: data[0] as String,
+            lastName: data[1] as String,
+          ),
         );
       case 'signup':
         return MaterialPageRoute<dynamic>(
@@ -56,4 +61,3 @@ class MyRoutes {
     }
   }
 }
-

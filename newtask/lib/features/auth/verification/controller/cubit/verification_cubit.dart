@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:newtask/features/auth/login/view/loginPage.dart';
+import 'package:newtask/features/auth/signup/view/signUpPage.dart';
 part 'verification_state.dart';
 
 class VerificationCubit extends Cubit<VerificationState>{
@@ -16,7 +17,7 @@ class VerificationCubit extends Cubit<VerificationState>{
     {
       Navigator.push(
       context as BuildContext,
-      MaterialPageRoute(builder: (context) => const loginPage()),
+      MaterialPageRoute(builder: (context) => const signUpPage()),
       );
     }
     else

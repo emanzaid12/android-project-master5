@@ -3,8 +3,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'package:newtask/features/auth/login/view/loginPage.dart';
+//import 'package:newtask/features/auth/login/view/signUpPage.dart';
 import 'package:newtask/features/auth/onboarding/model/onboarding_model.dart';
+import 'package:newtask/features/auth/signup/view/signUpPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'onboarding_controller_state.dart';
@@ -26,7 +27,7 @@ class OnboardingControllerCubit extends Cubit<OnboardingControllerState> {
     Navigator.push(
       context,
       MaterialPageRoute<void>(
-        builder: (BuildContext context) => const loginPage(),
+        builder: (BuildContext context) => const signUpPage(),
       ),
     );
   }
