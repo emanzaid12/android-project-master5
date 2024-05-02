@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newtask/features/auth/login/view/loginPage.dart';
 import 'package:newtask/features/auth/signup/controller/cubit/sign_up_cubit.dart';
+import 'package:newtask/features/dashboard/modules/users/model/local_db_data.dart';
 
 class button_sign_up extends StatelessWidget {
   button_sign_up({super.key, required this.controller});
@@ -16,18 +19,27 @@ class button_sign_up extends StatelessWidget {
           SignUpCubit controller = context.read<SignUpCubit>();
           return Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+              const SizedBox(
+                height: 10
+              ),
+             
                   FilledButton(
                       style: const ButtonStyle(
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.blue)),
-                      onPressed: () =>
-                          controller.OnPressedConfirmButton(context),
-                      child: const Text("Confirm")),
-                ],
-              ),
+                       onPressed: () async {
+                        await (await DatabaseRepo.instance)
+                            .insert(name: 'Ahmed', address: 'Tanta');
+
+                        
+                        // controller.onPressedConfirmButton(context);
+                        
+                      },
+                      child: const Text("Confirm")
+                      
+                          ),
+                
+              
               const SizedBox(
                 height: 10,
               ),

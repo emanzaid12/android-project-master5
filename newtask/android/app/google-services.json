@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "400628582389",
+    "project_id": "traningcourse-bb860",
+    "storage_bucket": "traningcourse-bb860.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400628582389:android:d33753a967362189a202bc",
+        "android_client_info": {
+          "package_name": "com.example.newtask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmwh2JkkJxvghB5Y9EgEP7QHHzKhb6Zok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
