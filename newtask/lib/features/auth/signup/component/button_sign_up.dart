@@ -28,10 +28,7 @@ class button_sign_up extends StatelessWidget {
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.blue)),
                        onPressed: () async {
-                        await (await DatabaseRepo.instance)
-                            .insert(name: 'Ahmed', address: 'Tanta');
-
-                        
+                        log('added successfully');
                         // controller.onPressedConfirmButton(context);
                         
                       },

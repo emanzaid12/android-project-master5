@@ -14,8 +14,17 @@ class UserCubit extends Cubit<UserState> {
   List<UserModel> users = [];
   Future<void> init() async {
     emit(UserLoading());
+    final List<ConnectivityResult> connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult.contains(ConnectivityResult.mobile) || 
+        connectivityResult.contains(ConnectivityResult.wifi))
+        {
+          users = await FirebaseRepo.instance.fetch();
+        }
+        else
+        {
+          users.await(await DatabaseRepo.instance).fetchUser();
+        }
     // users = await (await DatabaseRepo.instance).fetch();
-    users = await FirebaseRepo.instance.fetch();
     if (users.isEmpty) {
       emit(UserEmpty());
     } else {

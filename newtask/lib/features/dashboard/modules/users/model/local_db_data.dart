@@ -7,7 +7,7 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:web/helpers.dart';
 
-class DatabaseRepo extends ParentRepo {
+class DatabaseRepo {
   DatabaseRepo._init();
 
   static DatabaseRepo? _singletoneObject;
@@ -41,20 +41,28 @@ address TEXT )
     """);
   }
 
-  @override
-  Future<void> delete({required int id})async {
+  Future<void> deleteUser({required int id})async {
     await _database.delete('user',where:'id=?',whereArgs: [id]);
   }
+    Future<void> deleteService({required int id})async {
+    await _database.delete('service',where:'id=?',whereArgs: [id]);
+  }
 
-  @override
-  Future<List<UserModel>> fetch()async {
+  Future<List<UserModel>> fetchUser()async {
     return(await _database.query('user')).map((e)=>UserModel.fromjson(e)).toList();
     
   }
+    Future<List<ServicModel>> fetchService()async {
+    return(await _database.query('service')).map((e)=>ServicModel.fromjson(e)).toList();
+    
+  }
 
-  @override
-  Future<void> insert({required String name, String? address})async {
+  Future<void> insertUser({required String name, String? address})async {
    await _database.insert('user',{'name':name,'address':address});
+   
+  }
+    Future<void> insertService({required String name, String? description, String?color,})async {
+   await _database.insert('user',{'name':name,'description':description, color:'color'});
    
   }
 }
