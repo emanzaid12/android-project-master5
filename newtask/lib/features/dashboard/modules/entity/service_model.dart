@@ -4,7 +4,6 @@ class ServiceModel {
   String? address;
   String? color;
 
-  ServiceModel({this.id,this.address,this.name});
 
   ServiceModel.fromjson(Map map){
     id =map['id'].toString();
