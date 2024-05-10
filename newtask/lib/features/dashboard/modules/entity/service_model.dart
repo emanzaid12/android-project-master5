@@ -4,9 +4,9 @@ class ServiceModel {
   String? address;
   String? color;
 
-  UserModel({this.id,this.address,this.name});
+  ServiceModel({this.id,this.address,this.name});
 
-  UserModel.fromjson(Map map){
+  ServiceModel.fromjson(Map map){
     id =map['id'].toString();
     description = map['description'];
     name = map['name'];
