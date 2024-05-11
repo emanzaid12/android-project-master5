@@ -22,7 +22,7 @@ class UserCubit extends Cubit<UserState> {
         }
         else
         {
-          users.await(await DatabaseRepo.instance).fetchUser();
+          users = await(await DatabaseRepo.instance).fetchUser();
         }
     // users = await (await DatabaseRepo.instance).fetch();
     if (users.isEmpty) {
