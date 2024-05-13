@@ -1,7 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:newtask/features/dashboard/modules/users/model/user_model.dart';
+import 'package:newtask/features/dashboard/modules/entity/user_model.dart';
+
 
 class UserItemWidget extends StatelessWidget {
   const UserItemWidget({super.key, required this.userModel});

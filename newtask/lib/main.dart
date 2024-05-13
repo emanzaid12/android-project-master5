@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:newtask/core/firebase/my_firebase.dart';
+import 'package:newtask/core/routes/my_routes.dart';
 import 'package:newtask/features/auth/login/view/loginPage.dart';
 import 'package:newtask/features/auth/onboarding/view/page/onboarding_page.dart';
 import 'package:newtask/features/auth/signup/view/signUpPage.dart';

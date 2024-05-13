@@ -28,7 +28,7 @@ class button_sign_up extends StatelessWidget {
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.blue)),
                        onPressed: () async {
-                        log('added successfully');
+                        //log('added successfully');
                         // controller.onPressedConfirmButton(context);
                         
                       },

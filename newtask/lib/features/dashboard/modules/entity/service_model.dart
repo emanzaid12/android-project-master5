@@ -3,7 +3,7 @@ class ServiceModel {
   String? name;
   String? address;
   String? color;
-
+  String? description;
 
   ServiceModel.fromjson(Map map){
     id =map['id'].toString();

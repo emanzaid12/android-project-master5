@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newtask/features/dashboard/modules/users/controller/cubit/user_cubit.dart';
-import 'package:newtask/features/dashboard/modules/users/model/user_model.dart';
+
 import 'package:newtask/features/dashboard/modules/users/view/components/user_iteam.dart';
 
 class UserPage extends StatelessWidget {

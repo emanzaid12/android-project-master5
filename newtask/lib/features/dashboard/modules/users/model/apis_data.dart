@@ -1,5 +1,6 @@
+import 'package:newtask/features/dashboard/modules/entity/user_model.dart';
 import 'package:newtask/features/dashboard/modules/users/model/parent_data.dart';
-import 'package:newtask/features/dashboard/modules/users/model/user_model.dart';
+
 
 class APIsRepo extends ParentRepo {
   @override

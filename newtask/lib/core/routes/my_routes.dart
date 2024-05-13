@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:newtask/features/auth/login/view/loginPage.dart';
+import 'package:newtask/features/auth/onboarding/view/page/onboarding_page.dart';
+import 'package:newtask/features/auth/signup/view/signUpPage.dart';
+import 'package:newtask/features/auth/verification/view/verificationPage.dart';
 
 class MyRoutes {
   static List<Route> initRoutes = [
     MaterialPageRoute<dynamic>(
-      builder: (BuildContext context) => const verificationPage(),
+       builder: (BuildContext context) => const verificationPage(),
     ),
   ];
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {

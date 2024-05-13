@@ -1,8 +1,10 @@
 import 'package:bloc/bloc.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:meta/meta.dart';
+import 'package:newtask/features/dashboard/modules/entity/user_model.dart';
 import 'package:newtask/features/dashboard/modules/users/model/firebase_data.dart';
 import 'package:newtask/features/dashboard/modules/users/model/local_db_data.dart';
-import 'package:newtask/features/dashboard/modules/users/model/user_model.dart';
+
 
 part 'user_state.dart';
 
