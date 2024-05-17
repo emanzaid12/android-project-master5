@@ -33,5 +33,6 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: MyRoutes.onGenerateRoute,
       onGenerateInitialRoutes: (_) => MyRoutes.initRoutes,
     );
-  }
-}
+    theme: 
+    darkTheme:
+    themeMode:  
