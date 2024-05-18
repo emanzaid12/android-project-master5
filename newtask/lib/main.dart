@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:newtask/core/firebase/my_firebase.dart';
 import 'package:newtask/core/routes/my_routes.dart';
+import 'package:newtask/core2/my_theme.dart';
 import 'package:newtask/features/auth/login/view/loginPage.dart';
 import 'package:newtask/features/auth/onboarding/view/page/onboarding_page.dart';
 import 'package:newtask/features/auth/signup/view/signUpPage.dart';
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
       //home: onBoarding ? const loginPage() : const OnBoardingPage(),
       onGenerateRoute: MyRoutes.onGenerateRoute,
       onGenerateInitialRoutes: (_) => MyRoutes.initRoutes,
+      theme: MyTheme.inastance.light,
+      darkTheme: MyTheme.inastance.dark,
+      themeMode: ThemeMode.dark,
     );
-    theme: 
-    darkTheme:
-    themeMode:  
+  }
+}
