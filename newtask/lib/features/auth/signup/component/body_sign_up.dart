@@ -11,11 +11,11 @@ class body_sign_up extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider .value(
-      value:controller,
+    return BlocProvider.value(
+      value: controller,
       child: BlocBuilder<SignUpCubit, SignUpState>(
         builder: (context, state) {
-          SignUpCubit controller =context.read<SignUpCubit>();
+          SignUpCubit controller = context.read<SignUpCubit>();
           return Form(
             key: controller.formKey,
             child: Column(
@@ -26,6 +26,7 @@ class body_sign_up extends StatelessWidget {
                   backgroundColor: Colors.blue,
                   title: const Text('Sign Up Page',
                       style: TextStyle(fontWeight: FontWeight.bold)),
+                  titleTextStyle: Theme.of(context).textTheme.displayLarge,
                 ),
                 const Spacer(
                   flex: 1,
@@ -42,7 +43,6 @@ class body_sign_up extends StatelessWidget {
                       fontSize: 20,
                       color: Color.fromARGB(255, 0, 95, 172)),
                 ),
-                
                 TextFormField(
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     controller: controller.firstNameController,
@@ -53,7 +53,6 @@ class body_sign_up extends StatelessWidget {
                         prefixIcon: const Icon(Icons.abc))),
                 const SizedBox(
                   height: 30,
-            
                 ),
                 TextFormField(
                     autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -78,7 +77,6 @@ class body_sign_up extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-               
                 TextFormField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   controller: controller.passwordController,
