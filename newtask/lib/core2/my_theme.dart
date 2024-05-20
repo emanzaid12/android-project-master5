@@ -24,7 +24,7 @@ class MyTheme {
       ),
     ),
     textTheme: const TextTheme(
-      displayLarge: TextStyle(fontSize: 16, color: Colors.orange),
+      displayLarge: TextStyle(fontSize: 25, color: Colors.orange),
       bodyLarge: TextStyle(
           fontSize: 19, color: Colors.green, fontWeight: FontWeight.bold),
       labelLarge: TextStyle(fontSize: 16, color: Colors.grey),

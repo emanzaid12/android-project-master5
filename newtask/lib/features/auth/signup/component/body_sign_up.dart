@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newtask/core/utils/validation.dart';
-import 'package:newtask/core2/cubit/parent_cubit.dart';
+
+import 'package:newtask/core2/cubit/parentt_cubit.dart';
 import 'package:newtask/features/auth/signup/controller/cubit/sign_up_cubit.dart';
 
 // ignore: must_be_immutable
@@ -14,6 +15,7 @@ class body_sign_up extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: controller,
+      //create:(context)=>ParenttCubit.instance,
       child: BlocBuilder<SignUpCubit, SignUpState>(
         builder: (context, state) {
           SignUpCubit controller = context.read<SignUpCubit>();
@@ -22,7 +24,7 @@ class body_sign_up extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                create:(context) ParentCubit.instans,
+               // create:(context) ParentCubit.instans,
                 AppBar(
                   leading: Image.asset('assets/image/R.png'),
                   backgroundColor: Colors.blue,

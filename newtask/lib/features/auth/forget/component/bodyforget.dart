@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newtask/core/utils/validation.dart';
+import 'package:newtask/core2/cubit/build_context_extension.dart';
 
 // ignore: must_be_immutable, camel_case_types
 class bodyforget extends StatelessWidget {
@@ -13,6 +14,7 @@ class bodyforget extends StatelessWidget {
         backgroundColor: Colors.blue,
         title: const Text('Forget Password Page',
             style: TextStyle(fontWeight: FontWeight.bold)),
+            titleTextStyle: context.getTheme.textTheme.displayLarge
       ),
       const Spacer(
         flex: 1,

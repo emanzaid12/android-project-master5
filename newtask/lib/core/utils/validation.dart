@@ -14,7 +14,7 @@ class validationOf {
     return "wrong password";
   }
   String? nameValidate(String? input){
-    if ((input?.length ?? 0) > 4) {
+    if ((input?.length ?? 0) > 3) {
       return null;
   }
   return "invalid name";
