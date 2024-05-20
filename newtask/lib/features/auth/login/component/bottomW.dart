@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newtask/core2/cubit/parentt_cubit.dart';
 import 'package:newtask/features/auth/forget/view/forgetPage.dart';
 import 'package:newtask/features/auth/signup/view/signUpPage.dart';
 
@@ -31,7 +32,7 @@ class bottomW extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Row(
+         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("Don't have account! "),
@@ -46,6 +47,22 @@ class bottomW extends StatelessWidget {
                   );
                 },
                 child: const Text("Sign up"))
+          ],
+
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           
+            FilledButton(
+                style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.blue)),
+                onPressed: () {
+                  ParenttCubit.instance.changMode();
+                  ParenttCubit.instance.changLang();
+
+                },
+                child: const Text("theme"))
           ],
         )
       ],

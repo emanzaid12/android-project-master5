@@ -9,7 +9,7 @@ class MyTheme {
       ),
     ),
     textTheme: const TextTheme(
-      displayLarge: TextStyle(fontSize: 16, color: Colors.blue),
+      displayLarge: TextStyle(fontSize: 25, color: Colors.white),
       bodyLarge: TextStyle(
         fontSize: 19,
         color: Colors.red,

@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newtask/core/firebase/my_firebase.dart';
 import 'package:newtask/core/routes/my_routes.dart';
+import 'package:newtask/core2/cubit/parentt_cubit.dart';
 import 'package:newtask/core2/my_theme.dart';
 import 'package:newtask/features/auth/login/view/loginPage.dart';
 import 'package:newtask/features/auth/onboarding/view/page/onboarding_page.dart';
@@ -28,14 +30,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      //home: onBoarding ? const loginPage() : const OnBoardingPage(),
-      onGenerateRoute: MyRoutes.onGenerateRoute,
-      onGenerateInitialRoutes: (_) => MyRoutes.initRoutes,
-      theme: MyTheme.inastance.light,
-      darkTheme: MyTheme.inastance.dark,
-      themeMode: ThemeMode.dark,
+    return BlocProvider(
+      create: (context) => ParenttCubit.instance,
+      child: BlocBuilder<ParenttCubit, ParenttState>(
+        builder: (context, state) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            //home: onBoarding ? const loginPage() : const OnBoardingPage(),
+            onGenerateRoute: MyRoutes.onGenerateRoute,
+            onGenerateInitialRoutes: (_) => MyRoutes.initRoutes,
+            theme: MyTheme.inastance.light,
+            darkTheme: MyTheme.inastance.dark,
+            themeMode: ParenttCubit.instance.themeMode,
+          );
+        },
+      ),
     );
   }
 }

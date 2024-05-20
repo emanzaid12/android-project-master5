@@ -10,11 +10,8 @@ class bodyW extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => ParenttCubit.instance,
-      child: BlocBuilder<ParenttCubit, ParenttState>(
-        builder: (context, state) {
-          return Column(
+
+    return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AppBar(
@@ -23,6 +20,7 @@ class bodyW extends StatelessWidget {
                 title:  Text('item_page_title'.tr,
                     style: TextStyle(fontWeight: FontWeight.bold)),
                     titleTextStyle: context.getTheme.textTheme.displayLarge,
+                   
               ),
               const Spacer(
                 flex: 1,
@@ -70,9 +68,8 @@ class bodyW extends StatelessWidget {
               ),
             ],
           );
-        },
-      ),
-    );
+        }
+      
   }
 
   InputDecoration decoration = InputDecoration(
@@ -86,4 +83,4 @@ class bodyW extends StatelessWidget {
         borderSide: const BorderSide(color: Colors.grey, width: 3),
         borderRadius: BorderRadius.circular(20)),
   );
-}
+

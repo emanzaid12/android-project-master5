@@ -16,6 +16,7 @@ class bodyV extends StatelessWidget {
           title: const Text('Verification Page',
               style: TextStyle(fontWeight: FontWeight.bold)),
               titleTextStyle: context.getTheme.textTheme.displayLarge
+              
         ),
         const Spacer(
           flex: 1,
