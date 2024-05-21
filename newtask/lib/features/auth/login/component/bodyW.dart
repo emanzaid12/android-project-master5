@@ -24,13 +24,30 @@ class bodyW extends StatelessWidget {
            ElevatedButton(
               onPressed: () {
                 ParenttCubit.instance.changMode();
-                ParenttCubit.instance.changLang();
+           //     ParenttCubit.instance.changLang();
               },
               style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(Colors.white),
               ),
               child: const Text(
                 'Theme',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+             //   ParenttCubit.instance.changMode();
+                ParenttCubit.instance.changLang();
+              },
+              style: const ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.white),
+              ),
+              child: const Text(
+                'Language',
                 style: TextStyle(
                   color: Colors.blue,
                   fontWeight: FontWeight.bold,

@@ -29,7 +29,7 @@ class button_sign_up extends StatelessWidget {
                               MaterialStatePropertyAll(Colors.blue)),
                        onPressed: () async {
                         //log('added successfully');
-                        // controller.onPressedConfirmButton(context);
+                         controller.OnPressedConfirmButton(context);
                         
                       },
                       child: const Text("Confirm")
@@ -48,8 +48,11 @@ class button_sign_up extends StatelessWidget {
                       style: const ButtonStyle(
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.blue)),
-                      onPressed: () =>
-                          controller.OnPressedConfirmButton(context),
+                      onPressed: () {
+                          //controller.OnPressedConfirmButton(context);
+                          
+                      }
+                        ,
                       child: const Text("Login")),
                 ],
               )

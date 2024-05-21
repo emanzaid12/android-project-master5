@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newtask/core/utils/validation.dart';
+import 'package:newtask/core2/cubit/build_context_extension.dart';
 
 import 'package:newtask/core2/cubit/parentt_cubit.dart';
 import 'package:newtask/features/auth/signup/controller/cubit/sign_up_cubit.dart';
@@ -28,9 +29,45 @@ class body_sign_up extends StatelessWidget {
                 AppBar(
                   leading: Image.asset('assets/image/R.png'),
                   backgroundColor: Colors.blue,
-                  title: const Text('Sign Up Page',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  title:  Text('item_page_title1'.tr,
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                   titleTextStyle: Theme.of(context).textTheme.displayLarge,
+                   actions: [
+                    ElevatedButton(
+                      onPressed: () {
+                        ParenttCubit.instance.changMode();
+                        //     ParenttCubit.instance.changLang();
+                      },
+                      style: const ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.white),
+                      ),
+                      child: const Text(
+                        'Theme',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                    //           ElevatedButton(
+                    //   onPressed: () {
+                    //     //   ParenttCubit.instance.changMode();
+                    //     ParenttCubit.instance.changLang();
+                    //   },
+                    //   style: const ButtonStyle(
+                    //     backgroundColor: MaterialStatePropertyAll(Colors.white),
+                    //   ),
+                    //   child: const Text(
+                    //     'Language',
+                    //     style: TextStyle(
+                    //       color: Colors.blue,
+                    //       fontWeight: FontWeight.bold,
+                    //       fontSize: 16,
+                    //     ),
+                    //   ),
+                    // ),
+                  ],
                 ),
                 const Spacer(
                   flex: 1,
