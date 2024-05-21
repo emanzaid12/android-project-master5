@@ -7,7 +7,7 @@ import 'package:newtask/features/auth/verification/view/verificationPage.dart';
 class MyRoutes {
   static List<Route> initRoutes = [
     MaterialPageRoute<dynamic>(
-       builder: (BuildContext context) => const verificationPage(),
+      builder: (BuildContext context) => const OnBoardingPage(),
     ),
   ];
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -27,7 +27,7 @@ class MyRoutes {
         );
       default:
         return MaterialPageRoute<dynamic>(
-          builder: (BuildContext context) => const OnBoardingPage(),
+          builder: (BuildContext context) => const verificationPage(),
         );
     }
   }
