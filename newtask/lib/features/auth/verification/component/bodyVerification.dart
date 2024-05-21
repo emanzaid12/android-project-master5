@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newtask/core2/cubit/build_context_extension.dart';
+import 'package:newtask/core2/cubit/parentt_cubit.dart';
 
 // ignore: must_be_immutable
 class bodyV extends StatelessWidget {
@@ -11,13 +12,19 @@ class bodyV extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AppBar(
+          
           leading: Image.asset('assets/image/R.png'),
           backgroundColor: Colors.blue,
           title: const Text('Verification Page',
               style: TextStyle(fontWeight: FontWeight.bold)),
-              titleTextStyle: context.getTheme.textTheme.displayLarge
+              titleTextStyle: context.getTheme.textTheme.displayLarge,
+             
               
         ),
+        const Spacer(
+          flex: 1,
+        ),
+        
         const Spacer(
           flex: 1,
         ),

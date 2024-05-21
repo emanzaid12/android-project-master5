@@ -20,11 +20,32 @@ class bodyW extends StatelessWidget {
                 title:  Text('item_page_title'.tr,
                     style: TextStyle(fontWeight: FontWeight.bold)),
                     titleTextStyle: context.getTheme.textTheme.displayLarge,
+                     actions: [
+           ElevatedButton(
+              onPressed: () {
+                ParenttCubit.instance.changMode();
+                ParenttCubit.instance.changLang();
+              },
+              style: const ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.white),
+              ),
+              child: const Text(
+                'Theme',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            
+          ],
                    
               ),
               const Spacer(
                 flex: 1,
               ),
+            
               const CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.blue,

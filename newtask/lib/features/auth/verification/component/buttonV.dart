@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newtask/core2/cubit/parentt_cubit.dart';
 import 'package:newtask/features/auth/login/view/loginPage.dart';
 import 'package:newtask/features/auth/signup/view/signUpPage.dart';
 
@@ -7,7 +8,8 @@ class buttonV extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(
+      children: [
       FilledButton(
           style: const ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(Colors.blue)),
@@ -15,9 +17,12 @@ class buttonV extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const signUpPage()),
+              
             );
           },
-          child: const Text("Verify"))
-    ]);
+          child: const Text("Verify")),
+         
+    ]
+    );
   }
 }

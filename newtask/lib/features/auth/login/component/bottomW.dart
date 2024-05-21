@@ -50,21 +50,6 @@ class bottomW extends StatelessWidget {
           ],
 
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-           
-            FilledButton(
-                style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.blue)),
-                onPressed: () {
-                  ParenttCubit.instance.changMode();
-                  ParenttCubit.instance.changLang();
-
-                },
-                child: const Text("theme"))
-          ],
-        )
       ],
     );
   }
