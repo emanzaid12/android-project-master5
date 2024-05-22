@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newtask/core2/cubit/parentt_cubit.dart';
 import 'package:newtask/features/auth/forget/view/forgetPage.dart';
 import 'package:newtask/features/auth/signup/view/signUpPage.dart';
+import 'package:newtask/features/dashboard/view/page/dashboardPage.dart';
 
 class bottomW extends StatelessWidget {
   const bottomW({super.key});
@@ -16,7 +17,14 @@ class bottomW extends StatelessWidget {
             FilledButton(
                 style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(Colors.blue)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const dashboardPage()),
+                  );
+                  //  Navigator.pushNamed(context, 'dashboardPage');
+                },
                 child: const Text("Login")),
             TextButton(
                 onPressed: () {
@@ -32,7 +40,7 @@ class bottomW extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-         Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("Don't have account! "),
@@ -42,13 +50,11 @@ class bottomW extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const signUpPage()),
+                    MaterialPageRoute(builder: (context) => const signUpPage()),
                   );
                 },
                 child: const Text("Sign up"))
           ],
-
         ),
       ],
     );
