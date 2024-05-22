@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newtask/core/utils/validation.dart';
 import 'package:newtask/core2/cubit/build_context_extension.dart';
+import 'package:newtask/core2/cubit/parentt_cubit.dart';
 
 // ignore: must_be_immutable, camel_case_types
 class bodyforget extends StatelessWidget {
@@ -12,9 +13,45 @@ class bodyforget extends StatelessWidget {
       AppBar(
         leading: Image.asset('assets/image/R.png'),
         backgroundColor: Colors.blue,
-        title: const Text('Forget Password Page',
+        title: Text('item_page_title2'.tr,
             style: TextStyle(fontWeight: FontWeight.bold)),
-            titleTextStyle: context.getTheme.textTheme.displayLarge
+        titleTextStyle: context.getTheme.textTheme.displayLarge,
+        actions: [
+          ElevatedButton(
+            onPressed: () {
+              ParenttCubit.instance.changMode();
+              //     ParenttCubit.instance.changLang();
+            },
+            style: const ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll(Colors.white),
+            ),
+            child: const Text(
+              'Theme',
+              style: TextStyle(
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+          ),
+          //           ElevatedButton(
+          //   onPressed: () {
+          //     //   ParenttCubit.instance.changMode();
+          //     ParenttCubit.instance.changLang();
+          //   },
+          //   style: const ButtonStyle(
+          //     backgroundColor: MaterialStatePropertyAll(Colors.white),
+          //   ),
+          //   child: const Text(
+          //     'Language',
+          //     style: TextStyle(
+          //       color: Colors.blue,
+          //       fontWeight: FontWeight.bold,
+          //       fontSize: 16,
+          //     ),
+          //   ),
+          // ),
+        ],
       ),
       const Spacer(
         flex: 1,
