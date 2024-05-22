@@ -25,14 +25,14 @@ class body_sign_up extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               // create:(context) ParentCubit.instans,
+                // create:(context) ParentCubit.instans,
                 AppBar(
                   leading: Image.asset('assets/image/R.png'),
                   backgroundColor: Colors.blue,
-                  title:  Text('item_page_title1'.tr,
+                  title: Text('item_page_title1'.tr,
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   titleTextStyle: Theme.of(context).textTheme.displayLarge,
-                   actions: [
+                  actions: [
                     ElevatedButton(
                       onPressed: () {
                         ParenttCubit.instance.changMode();
@@ -50,23 +50,23 @@ class body_sign_up extends StatelessWidget {
                         ),
                       ),
                     ),
-                    //           ElevatedButton(
-                    //   onPressed: () {
-                    //     //   ParenttCubit.instance.changMode();
-                    //     ParenttCubit.instance.changLang();
-                    //   },
-                    //   style: const ButtonStyle(
-                    //     backgroundColor: MaterialStatePropertyAll(Colors.white),
-                    //   ),
-                    //   child: const Text(
-                    //     'Language',
-                    //     style: TextStyle(
-                    //       color: Colors.blue,
-                    //       fontWeight: FontWeight.bold,
-                    //       fontSize: 16,
-                    //     ),
-                    //   ),
-                    // ),
+                    ElevatedButton(
+                      onPressed: () {
+                        // ParenttCubit.instance.changMode();
+                        ParenttCubit.instance.changLang();
+                      },
+                      style: const ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.white),
+                      ),
+                      child: const Text(
+                        'Language',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
                 const Spacer(
